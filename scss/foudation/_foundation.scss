@@ -1,0 +1,21 @@
+/*========================================================
+共通部分
+===========================================================*/
+.html,body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    color: #131d34;
+    position: relative;
+}
+
+.concept-wrapper {
+  background-color: #000;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  padding: 50px 20px;
+  
+  p {
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@mixin pc {
+    @media only screen and (min-width: $media-pc ) {
+      @content;  
+    }
+  }
+  @mixin pc {
+    @media (min-width: 1440px) { @content; }
+  }
+//   @mixin for-desktop-up {
+//     @media (min-width: 1200px) { @content; }
+//   }
+//   @mixin for-big-desktop-up {
+//     @media (min-width: 1800px) { @content; }
+//   }
+// .concept-wrapper {
+//     @include sp {
+//         display: flex;
+
+//     }
+// }

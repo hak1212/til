@@ -1,0 +1,546 @@
+@charset "UTF-8";
+/*==============================================================
+foundation
+===============================================================*/
+/*========================================================
+共通部分
+===========================================================*/
+.html, body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  color: #131d34;
+  position: relative;
+}
+
+.concept-wrapper {
+  background-color: #000;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.concept-wrapper p {
+  padding-top: 10px;
+}
+
+/*=============================================================
+layout
+===============================================================*/
+/*=========================================================
+ヘッダー
+===========================================================*/
+.l-header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  z-index: 70;
+}
+
+.l-header .l-header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.l-header .l-header__left img {
+  display: block;
+  width: 143px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.l-header .l-header__left p {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.l-header .l-header__left p span {
+  font-size: 18px;
+}
+
+.l-header .l-header__right {
+  cursor: pointer;
+}
+
+.l-header .l-header__right .p-global-menu {
+  position: relative;
+  width: 100%;
+}
+
+.l-header .l-header__right .p-global-menu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li {
+  margin: auto;
+  list-style: none;
+  padding: 23px 15px;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li:hover {
+  background-color: #D4F1F8;
+  height: 70px;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li:hover > ul li {
+  height: 50px;
+  background-color: #E9F8FB;
+  padding: 15px 60px 15px 15px;
+  overflow: visible;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li .c-submenu2 {
+  left: 142px;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li .c-submenu3 {
+  left: 455px;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li .c-submenu4 {
+  left: 550px;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li > ul {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li > ul li {
+  list-style: none;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .1s;
+  transition: .1s;
+  vertical-align: middle;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li > ul li:hover {
+  background: white;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li > ul li:hover a {
+  color: #2498b3;
+}
+
+.l-header .l-header__right .p-global-menu > ul > li > ul li a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.l-header .l-header__right .p-global-menu > ul .p-mainmenu__blue {
+  height: 70px;
+  background-color: #2498b3;
+  color: white;
+  margin: auto;
+}
+
+.l-header .l-header__right .p-global-menu > ul .p-mainmenu__blue:hover {
+  background-color: #2498b3;
+}
+
+/* ==================================================================
+ トップ背景
+====================================================================*/
+.l-topbg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url(../images/bg-hero3.png);
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.l-topbg .l-topbg-hero {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 25px;
+  background: url(../images/bg-hero1.png), url(../images/bg-hero2.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+/*===================================================
+ホームコンテンツ
+=====================================================*/
+.l-home-contents {
+  position: relative;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.l-home-contents .l-home-contents-wrap {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: -80px;
+  background-color: white;
+  padding: 15px;
+  z-index: 60;
+}
+
+.l-home-contents .l-home-contents-wrap img {
+  display: none;
+}
+
+.l-home-contents .l-home-contents-wrap p {
+  font-weight: 700px;
+  font-size: 13px;
+}
+
+.l-home-contents .l-home-contents-wrap .button-comic {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 20px;
+  font-weight: 700;
+  color: white;
+  border: 1px solid #2498b3;
+  border-radius: 5px;
+  background-color: #2498b3;
+  cursor: pointer;
+}
+
+/*==========================================================
+メディアクエリ
+============================================================*/
+@media screen and (min-width: 400px) {
+  .l-header__left p {
+    display: none;
+  }
+  .l-header__right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l-topbg {
+    position: relative;
+    width: 100%;
+    height: 800px;
+  }
+  .l-topbg .l-topbg-hero {
+    position: absolute;
+    top: 0px;
+  }
+  .l-home-contents {
+    width: 50%;
+    margin: 0 auto;
+    position: static;
+    position: relative;
+    top: -650px;
+    margin-bottom: -650px;
+    /*position: relative;の空白リセット*/
+    z-index: 65;
+  }
+  .l-home-contents .l-home-contents-wrap {
+    margin: 0 auto;
+    position: static;
+    width: 415px;
+    height: 320px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .l-home-contents .l-home-contents-wrap img {
+    display: inline-block;
+    width: 280px;
+    margin-top: 20px;
+  }
+  .l-home-contents .l-home-contents-wrap p {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .l-home-contents .l-home-contents-wrap .button-comic {
+    font-size: 18px;
+    padding: 20px 35px;
+  }
+  .concept-wrapper {
+    position: absolute;
+    top: 470px;
+    height: 550px;
+    background-color: transparent;
+    z-index: 60;
+  }
+  .concept-wrapper .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .concept-wrapper .icon-container .concept-icon {
+    max-width: 100%;
+    margin: 0px 30px;
+  }
+  .concept-wrapper .icon-container .concept-icon p {
+    text-align: left;
+    font-weight: normal;
+    line-height: 28px;
+  }
+  .background-black {
+    width: 100%;
+    height: 250px;
+    background: black;
+    position: relative;
+    top: 230px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .l-header {
+    height: 70px;
+  }
+  .l-header .l-header__right {
+    display: block;
+  }
+  .l-header .drawer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .l-header .l-header__left {
+    line-height: 18px;
+  }
+  .l-header .l-header__left img {
+    width: 200px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+  .l-header .l-header__left p {
+    padding: 15px;
+    display: block;
+  }
+  .concept-wrapper .icon-container {
+    width: 65%;
+    margin: auto;
+  }
+}
+
+/*==============================================================
+object
+================================================================*/
+/*
+project
+----------------------------------------------------------------*/
+/*===========================================================
+/*ハンバーガーメニュー
+=============================================================*/
+.drawer .menu-content {
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 80;
+  display: none;
+}
+
+.drawer .menu-content .menu-hover {
+  vertical-align: middle;
+}
+
+.drawer .menu-content .menu-hover > li {
+  background-color: white;
+}
+
+.drawer .menu-content .menu-hover > li .menu {
+  height: 50px;
+  position: relative;
+}
+
+.drawer .menu-content .menu-hover > li .menu a {
+  display: block;
+  position: relative;
+  left: 10px;
+  top: 15px;
+}
+
+.drawer .menu-content .menu-hover > li ul {
+  display: none;
+}
+
+.drawer .menu-content .menu-hover > li ul li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+  font-weight: normal;
+}
+
+.drawer .menu-content .menu-hover > li ul li a {
+  position: relative;
+  left: 30px;
+  top: 15px;
+}
+
+/*
+component
+-----------------------------------------------------------------*/
+/*=============================================================
+ハンバーガーボタン
+===============================================================*/
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  /* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 25px;
+  border-radius: 3px;
+  background: #2498B3;
+  -webkit-transition: .2s;
+  transition: .2s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になるように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: white;
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: white;
+}
+
+/*アイコンがクリックされたら背景色が変わる*/
+#drawer-check:checked ~ .drawer-open {
+  background-color: #2498B3;
+}
+
+/*===============================================================
+アコーディオンメニューボタン
+================================================================*/
+.menu span {
+  display: block;
+  position: relative;
+}
+
+.menu span:nth-child(2) {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 5px;
+  background: #121212;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background: #121212;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  /* 横棒を縦にするために90℃回転させる */
+  z-index: 120;
+  /*:nth-child(4)は100*/
+}
+
+.menu span:nth-child(3) {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 5px;
+  background: #121212;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 120;
+}
+
+.menu span:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 100;
+  /*ハンバーガーアイコンと同じ値に*/
+}
+
+/*hover時の動き*/
+.menu-hover li:hover .menu span:nth-child(2) {
+  display: none;
+}
+
+.menu-hover li:hover .menu span:nth-child(4) {
+  background-color: #E9F8FB;
+}
+
+.menu:hover, .menu-hover > li > ul > li:hover {
+  background: #E9F8FB;
+}
+
+/*
+utility
+-----------------------------------------------------------------*/
+/*# sourceMappingURL=style.css.map */
