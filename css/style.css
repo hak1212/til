@@ -6,18 +6,18 @@ foundation
 共通部分
 ===========================================================*/
 .html, body {
+  position: relative;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
   color: #131d34;
-  position: relative;
 }
 
 .concept-wrapper {
-  background-color: #000;
-  color: #fff;
-  font-weight: 900;
-  text-align: center;
   padding: 50px 20px;
+  text-align: center;
+  background-color: #000;
+  font-weight: 900;
+  color: #fff;
 }
 
 .concept-wrapper p {
@@ -27,29 +27,18 @@ foundation
 /*=============================================================
 layout
 ===============================================================*/
-/*=========================================================
-ヘッダー
-===========================================================*/
 .l-header {
   width: 100%;
   height: 50px;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   z-index: 70;
 }
 
 .l-header .l-header__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
 }
@@ -75,20 +64,18 @@ layout
 }
 
 .l-header .l-header__right .p-global-menu {
-  position: relative;
   width: 100%;
+  position: relative;
 }
 
 .l-header .l-header__right .p-global-menu > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .l-header .l-header__right .p-global-menu > ul > li {
   margin: auto;
-  list-style: none;
   padding: 23px 15px;
+  list-style: none;
 }
 
 .l-header .l-header__right .p-global-menu > ul > li:hover {
@@ -98,9 +85,9 @@ layout
 
 .l-header .l-header__right .p-global-menu > ul > li:hover > ul li {
   height: 50px;
-  background-color: #E9F8FB;
   padding: 15px 60px 15px 15px;
   overflow: visible;
+  background-color: #E9F8FB;
 }
 
 .l-header .l-header__right .p-global-menu > ul > li .c-submenu2 {
@@ -124,12 +111,11 @@ layout
 }
 
 .l-header .l-header__right .p-global-menu > ul > li > ul li {
-  list-style: none;
   height: 0;
   overflow: hidden;
-  -webkit-transition: .1s;
-  transition: .1s;
   vertical-align: middle;
+  list-style: none;
+  transition: .1s;
 }
 
 .l-header .l-header__right .p-global-menu > ul > li > ul li:hover {
@@ -147,22 +133,19 @@ layout
 
 .l-header .l-header__right .p-global-menu > ul .p-mainmenu__blue {
   height: 70px;
+  margin: auto;
   background-color: #2498b3;
   color: white;
-  margin: auto;
 }
 
 .l-header .l-header__right .p-global-menu > ul .p-mainmenu__blue:hover {
   background-color: #2498b3;
 }
 
-/* ==================================================================
- トップ背景
-====================================================================*/
 .l-topbg {
-  position: relative;
   width: 100%;
   height: 300px;
+  position: relative;
   background: url(../images/bg-hero3.png);
   background-position: center center;
   background-attachment: fixed;
@@ -178,16 +161,13 @@ layout
   background-size: cover;
 }
 
-/*===================================================
-ホームコンテンツ
-=====================================================*/
-.l-home-contents {
+.l-contents {
   position: relative;
   text-align: center;
   margin-bottom: 70px;
 }
 
-.l-home-contents .l-home-contents-wrap {
+.l-contents .l-contents-wrap {
   width: 100%;
   height: 150px;
   position: absolute;
@@ -197,16 +177,16 @@ layout
   z-index: 60;
 }
 
-.l-home-contents .l-home-contents-wrap img {
+.l-contents .l-contents-wrap img {
   display: none;
 }
 
-.l-home-contents .l-home-contents-wrap p {
+.l-contents .l-contents-wrap p {
   font-weight: 700px;
   font-size: 13px;
 }
 
-.l-home-contents .l-home-contents-wrap .button-comic {
+.l-contents .l-contents-wrap .button-comic {
   display: inline-block;
   margin: 10px;
   padding: 8px 20px;
@@ -218,9 +198,6 @@ layout
   cursor: pointer;
 }
 
-/*==========================================================
-メディアクエリ
-============================================================*/
 @media screen and (min-width: 400px) {
   .l-header__left p {
     display: none;
@@ -240,51 +217,48 @@ layout
     position: absolute;
     top: 0px;
   }
-  .l-home-contents {
+  .l-contents {
     width: 50%;
-    margin: 0 auto;
     position: static;
     position: relative;
     top: -650px;
-    margin-bottom: -650px;
-    /*position: relative;の空白リセット*/
+    margin: 0 auto -650px auto;
+    /*-650px…position: relative;の空白リセット*/
     z-index: 65;
   }
-  .l-home-contents .l-home-contents-wrap {
-    margin: 0 auto;
-    position: static;
+  .l-contents .l-contents-wrap {
     width: 415px;
     height: 320px;
+    position: static;
+    margin: 0 auto;
     text-align: center;
     border-radius: 10px;
   }
-  .l-home-contents .l-home-contents-wrap img {
-    display: inline-block;
+  .l-contents .l-contents-wrap img {
     width: 280px;
+    display: inline-block;
     margin-top: 20px;
   }
-  .l-home-contents .l-home-contents-wrap p {
+  .l-contents .l-contents-wrap p {
     padding: 20px;
     font-size: 16px;
   }
-  .l-home-contents .l-home-contents-wrap .button-comic {
+  .l-contents .l-contents-wrap .button-comic {
     font-size: 18px;
     padding: 20px 35px;
   }
   .concept-wrapper {
+    height: 550px;
     position: absolute;
     top: 470px;
-    height: 550px;
+    margin-bottom: -430px;
     background-color: transparent;
     z-index: 60;
   }
   .concept-wrapper .icon-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     max-width: 50%;
+    display: flex;
+    justify-content: space-around;
     margin: 0 auto;
   }
   .concept-wrapper .icon-container .concept-icon {
@@ -298,7 +272,7 @@ layout
   }
   .background-black {
     width: 100%;
-    height: 250px;
+    height: 350px;
     background: black;
     position: relative;
     top: 230px;
@@ -327,8 +301,8 @@ layout
     margin-bottom: 5px;
   }
   .l-header .l-header__left p {
-    padding: 15px;
     display: block;
+    padding: 15px;
   }
   .concept-wrapper .icon-container {
     width: 65%;
@@ -342,9 +316,6 @@ object
 /*
 project
 ----------------------------------------------------------------*/
-/*===========================================================
-/*ハンバーガーメニュー
-=============================================================*/
 .drawer .menu-content {
   width: 100%;
   height: 30%;
@@ -395,9 +366,6 @@ project
 /*
 component
 -----------------------------------------------------------------*/
-/*=============================================================
-ハンバーガーボタン
-===============================================================*/
 /* チェックボックスは非表示に */
 .drawer-hidden {
   display: none;
@@ -405,17 +373,11 @@ component
 
 /* ハンバーガーアイコンの設置スペース */
 .drawer-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 50px;
   width: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 100;
   /* 重なり順を一番上に */
   cursor: pointer;
@@ -431,7 +393,6 @@ component
   width: 25px;
   border-radius: 3px;
   background: #2498B3;
-  -webkit-transition: .2s;
   transition: .2s;
   position: absolute;
 }
@@ -454,15 +415,13 @@ component
 /* アイコンがクリックされたらアイコンが×印になるように上下の線を回転 */
 #drawer-check:checked ~ .drawer-open span::before {
   bottom: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   background-color: white;
 }
 
 #drawer-check:checked ~ .drawer-open span::after {
   top: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   background-color: white;
 }
 
@@ -471,9 +430,6 @@ component
   background-color: #2498B3;
 }
 
-/*===============================================================
-アコーディオンメニューボタン
-================================================================*/
 .menu span {
   display: block;
   position: relative;
@@ -481,19 +437,15 @@ component
 
 .menu span:nth-child(2) {
   content: '';
-  display: block;
   width: 25px;
   height: 2px;
-  border-radius: 5px;
-  background: #121212;
+  display: block;
   position: absolute;
   right: 10px;
   top: 50%;
+  border-radius: 5px;
   background: #121212;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transform: translateY(-50%) rotate(90deg);
-          transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
   /* 横棒を縦にするために90℃回転させる */
   z-index: 120;
   /*:nth-child(4)は100*/
@@ -501,28 +453,27 @@ component
 
 .menu span:nth-child(3) {
   content: '';
-  display: block;
   width: 25px;
   height: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
   border-radius: 5px;
   background: #121212;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 120;
 }
 
 .menu span:nth-child(4) {
   width: 50px;
   height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
   background: white;
   text-align: center;
   cursor: pointer;
-  position: absolute;
-  right: 0px;
-  top: 0px;
   z-index: 100;
   /*ハンバーガーアイコンと同じ値に*/
 }

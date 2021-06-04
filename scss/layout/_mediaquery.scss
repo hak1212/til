@@ -1,150 +1,145 @@
-/*==========================================================
-メディアクエリ
-============================================================*/
 // 変数を定義（マップ型）
 $breakpoints: (
-  'sm': 'screen and (min-width: 400px)',
-  'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 1200px)',
-  'xl': 'screen and (min-width: 1440px)',
+	'sm': 'screen and (min-width: 400px)',
+	'md': 'screen and (min-width: 768px)',
+	'lg': 'screen and (min-width: 1200px)',
+	'xl': 'screen and (min-width: 1440px)',
 ) !default;
 
 @mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
 }
 
 // ヘッダー
 @include mq(sm) {
- .l-header__left p {
-    display: none;
-  }
-  
+.l-header__left p {
+		display: none;
+	}
+	
 .l-header__right {
-   display: none; 
-  }
+	display: none; 
+	}
 }
 
 @include mq(md) {
-    .l-topbg {
-    position: relative;
-    width: 100%;
-    height: 800px;
+	.l-topbg {
+		position: relative;
+		width: 100%;
+		height: 800px;
 
-    .l-topbg-hero {
-      position: absolute;
-      top: 0px;
-    }
-  }
+		.l-topbg-hero {
+			position: absolute;
+			top: 0px;
+		}
+	}
 
-  .l-home-contents {
-    width: 50%;
-    margin: 0 auto;
-    position: static;
-    position: relative;
-    top: -650px; 
-    margin-bottom: -650px;  /*position: relative;の空白リセット*/
-    z-index: 65;
-    
-    .l-home-contents-wrap {
-      margin: 0 auto;
-      position: static;
-      width: 415px;
-      height: 320px;
-      text-align: center;
-      border-radius: 10px;
+	.l-contents {
+		width: 50%;
+		position: static;
+		position: relative;
+		top: -650px; 
+		margin: 0 auto -650px auto; /*-650px…position: relative;の空白リセット*/
+		z-index: 65;
+		
+		.l-contents-wrap {
+			width: 415px;
+			height: 320px;
+			position: static;
+			margin: 0 auto;
+			text-align: center;
+			border-radius: 10px;
 
-      img {
-        display: inline-block;
-        width: 280px;
-        margin-top: 20px;
-      }
+			img {
+				width: 280px;
+				display: inline-block;
+				margin-top: 20px;
+			}
 
-      p {
-        padding: 20px;
-        font-size: 16px;
-      }
-      
-      .button-comic {
-        font-size: 18px;
-        padding: 20px 35px;
-      } 
-    }    
-  }
-  
-  .concept-wrapper {
-    position: absolute;
-    top: 470px;
-    height: 550px;
-    background-color: transparent;
-    z-index: 60;
+			p {
+				padding: 20px;
+				font-size: 16px;
+			}
+			
+			.button-comic {
+				font-size: 18px;
+				padding: 20px 35px;
+			} 
+		}    
+	}
+	
+	.concept-wrapper {
+		height: 550px;
+		position: absolute;
+		top: 470px;
+		margin-bottom: -430px;
+		background-color: transparent;
+		z-index: 60;
 
-    .icon-container {
-      display: flex;
-      justify-content: space-around;
-      max-width: 50%;
-      margin: 0 auto;
-      
-      .concept-icon {
-        max-width: 100%;
-        margin: 0px 30px;
-        
-        p {
-          text-align: left;
-          font-weight: normal;
-          line-height: 28px;
-        }
-      }
-    }
-  }
-  .background-black {
-    width: 100%;
-    height: 250px;
-    background: black;
-    // margin-top: 0px;
-    position: relative;
-    top: 230px;
-  }
+		.icon-container {
+			max-width: 50%;
+			display: flex;
+			justify-content: space-around;
+			margin: 0 auto;
+			
+			.concept-icon {
+				max-width: 100%;
+				margin: 0px 30px;
+				
+				p {
+					text-align: left;
+					font-weight: normal;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+	.background-black {
+		width: 100%;
+		height: 350px;
+		background: black;
+		position: relative;
+		top: 230px;
+	}
 }
 
 @include mq(lg) {
-  .l-header {
-    height: 70px;
+	.l-header {
+		height: 70px;
 
-    .l-header__right {
-      display: block;    
-    }
-    
-    .drawer {
-      display: none;
-    } 
-  }
+		.l-header__right {
+			display: block;
+		}
+
+		.drawer {
+			display: none;
+		} 
+	}
 }
 
 @include mq(xl) {
-  .l-header {
-    
-    .l-header__left {
-      line-height: 18px;
-      
-      img{
-        width: 200px;
-        margin-left: 20px;
-        margin-bottom: 5px;
-      }
-      p {
-        padding: 15px;
-        display: block;
-      }
-    }   
-  }   
-  
-  .concept-wrapper {
-    .icon-container {
-      width: 65%;
-      margin: auto;
-     
-    }
-  }
+	.l-header {
+
+		.l-header__left {
+			line-height: 18px;
+
+			img{
+				width: 200px;
+				margin-left: 20px;
+				margin-bottom: 5px;
+			}
+			p {
+				display: block;
+				padding: 15px;
+			}
+		}
+	}
+
+	.concept-wrapper {
+		.icon-container {
+			width: 65%;
+			margin: auto;
+		}
+	}
 }

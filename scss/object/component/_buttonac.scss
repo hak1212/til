@@ -1,63 +1,56 @@
-/*===============================================================
-アコーディオンメニューボタン
-================================================================*/
 .menu span {
-    display: block;
-    position: relative;
+	display: block;
+	position: relative;
 }
 .menu span:nth-child(2){
-    content: '';
-    display: block;
-    width: 25px;
-    height: 2px;
-    border-radius: 5px;
-    background:#121212;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    background: #121212;
-    transform: translateY(-50%);
-    transform: translateY(-50%) rotate(90deg);/* 横棒を縦にするために90℃回転させる */
-    z-index: 120;/*:nth-child(4)は100*/
+	content: '';
+	width: 25px;
+	height: 2px;
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	border-radius: 5px;
+	background:#121212;
+	transform: translateY(-50%) rotate(90deg);/* 横棒を縦にするために90℃回転させる */
+	z-index: 120;/*:nth-child(4)は100*/
 }
-  
+
 .menu span:nth-child(3){
-    content: '';
-    display: block;
-    width: 25px;
-    height: 2px;
-    border-radius: 5px;
-    background: #121212;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 120;
+	content: '';
+	width: 25px;
+	height: 2px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	border-radius: 5px;
+	background: #121212;
+	transform: translateY(-50%);
+	z-index: 120;
 }
-  
+
 .menu span:nth-child(4) {
-    width: 50px;
-    height: 50px;
-    background: white;
-    // border-radius: 20px;
-    text-align: center;
-    // padding: 1px 20px;
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    z-index: 100;/*ハンバーガーアイコンと同じ値に*/
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: white;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;/*ハンバーガーアイコンと同じ値に*/
 }
-  
+
 /*hover時の動き*/
 .menu-hover li:hover .menu span:nth-child(2){
-    display: none;
+	display: none;
 }
 
 .menu-hover li:hover .menu span:nth-child(4) {
-    background-color: #E9F8FB;
+	background-color: #E9F8FB;
 }
 
 .menu:hover, .menu-hover>li>ul>li:hover {
-    background: #E9F8FB;
-} 
+	background: #E9F8FB;
+}
